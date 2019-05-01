@@ -1,0 +1,39 @@
+﻿@model List<Practice12April.Models.SportsPersonData>
+@{
+    ViewData["Title"] = "SportsList";
+}
+
+<h2>SportsList</h2>
+
+<table style="border:solid 1px">
+
+    @foreach (var items in Model)
+
+    {
+        string style = items.DoesHeOrShePlayNow ? "background-color:Red" : "background-color:Yellow";
+
+    <tr style="@style;border:solid 1px">
+        <td style="border:solid 1px">
+            @items.SportsPersonId
+
+        </td>
+
+        <td style="border:solid 1px">
+            @items.SportPersonName
+
+        </td>
+
+
+        <td style="border:solid 1px">
+            @items.SportsName
+        </td>
+
+        <td style="border:solid 1px">
+            @items.DoesHeOrShePlayNow
+        </td>
+
+    </tr>
+    }
+
+</table>
+

@@ -1,0 +1,32 @@
+﻿@model List<Practice12April.Models.SportsPersonData>
+@{
+    ViewData["Title"] = "SportsList";
+}
+
+<h2>SportsList</h2>
+
+<table class="table table-bordered">
+    <tr>
+        @foreach (var items in Model)
+        {
+            <td>
+                @items.SportPersonName;
+            </td>
+
+            <td>
+                @items.SportsPersonId;
+            </td>
+
+
+            <td>
+                @items.SportsName;
+            </td>
+
+            <td>
+                @items.DoesHeOrShePlayNow;
+            </td>
+
+        }
+    </tr>
+</table>
+

@@ -1,0 +1,31 @@
+﻿@model Practice12April.Models.Details
+
+@{
+    ViewData["Title"] = "index";
+}
+
+<div class="container" style="background-color:lavender">
+    <h2 style="font-family:sans-serif"> Total number of keys: @Model.count </h2>
+
+        <ul>
+            <h3>Keys are as follows:</h3>
+            @foreach (var item in Model.keys)
+            {
+                <li> @item</li>
+            }
+        </ul>
+
+
+        <ul>
+            <h3>Values are as follows:</h3>
+            @foreach (var items in Model.values)
+            {
+                <li> @items</li>
+            }
+        </ul>
+</div>
+
+
+
+
+
